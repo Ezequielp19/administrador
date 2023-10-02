@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Companias</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <div class="ion-text-center">
+    <h2>Lista de companias</h2>
+    <!-- Enlace a Bootstrap desde un CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Telefono</th>
+          <th scope="col">Correo Electrónico</th>
+          <th scope="col">Dirreción</th>
+          <th scope="col">Acciones</th> <!-- Columna para acciones -->
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>John</td>
+          <td>234213434</td>
+          <td>john@example.com</td>
+          <td>mitre 3028</td>
+          <td>
+            <button class="btn btn-primary" (click)="verAdmin(admin)">Ver</button>
+            <button class="btn btn-warning" (click)="editarAdmin(admin)">Editar</button>
+            <button class="btn btn-danger" (click)="deshabilitarAdmin(admin)">Deshabilitar</button>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>John</td>
+          <td>234213434</td>
+          <td>john@example.com</td>
+          <td>mitre 3000</td>
+          <td>
+            <button class="btn btn-primary" (click)="verAdmin(admin)">Ver</button>
+            <button class="btn btn-warning" (click)="editarAdmin(admin)">Editar</button>
+            <button class="btn btn-danger" (click)="deshabilitarAdmin(admin)">Deshabilitar</button>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>John</td>
+          <td>764213434</td>
+          <td>Rick@example.com</td>
+          <td>mitre 4000</td>
+          <td>
+            <button class="btn btn-primary" (click)="verAdmin(admin)">Ver</button>
+            <button class="btn btn-warning" (click)="editarAdmin(admin)">Editar</button>
+            <button class="btn btn-danger" (click)="deshabilitarAdmin(admin)">Deshabilitar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</ion-content>
