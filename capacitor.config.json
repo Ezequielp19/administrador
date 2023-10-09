@@ -1,6 +1,7 @@
 {
   "appId": "io.ionic.starter",
-  "appName": "motorbike",
+  "appName": "hawai",
+  "version": "1.0.0",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www",

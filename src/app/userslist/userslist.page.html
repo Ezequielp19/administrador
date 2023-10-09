@@ -1,4 +1,4 @@
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar>
     <ion-title>Users</ion-title>
     <ion-buttons slot="start">
@@ -25,4 +25,25 @@
     </ion-row>
   </ion-grid>
 
+</ion-content> -->
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Iniciar Sesión</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="d-flex justify-content-center align-items-center">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <form class="col-md-6">
+    <div class="form-group">
+      <label for="email">Correo Electrónico</label>
+      <input type="email" class="form-control" id="email" [(ngModel)]="email">
+    </div>
+    <div class="form-group">
+      <label for="password">Contraseña</label>
+      <input type="password" class="form-control" id="password" [(ngModel)]="password">
+    </div>
+    <button type="button" class="btn btn-primary btn-block" (click)="navigateToPage1()">Iniciar Sesión</button>
+  </form>
 </ion-content>

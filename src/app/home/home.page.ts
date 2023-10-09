@@ -29,4 +29,6 @@ export class HomePage {
   navigateToPage5() {
     this.router.navigate(['/administrador']); //
   }
+
+  
 }
