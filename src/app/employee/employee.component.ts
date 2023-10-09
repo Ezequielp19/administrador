@@ -26,4 +26,7 @@ export class EmployeeComponent implements OnInit {
   navigateToPage2() {
     this.router.navigate(['/product']); //
   }
+  navigateToPage5() {
+    this.router.navigate(['/company']); //
+  }
 }

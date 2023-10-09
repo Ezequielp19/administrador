@@ -30,4 +30,9 @@ export class AdministradorComponent implements OnInit {
     this.router.navigate(['/product']); //
   }
 
+  navigateToPage5() {
+    this.router.navigate(['/company']); //
+  }
+
+
 }

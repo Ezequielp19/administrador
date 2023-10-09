@@ -4,12 +4,16 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
   {
     path: 'usuarios',
     loadChildren: () => import('./userslist/userslist.module').then( m => m.UserslistPageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login-routing.module').then( m => m.LoginPageRoutingModule)
   },
   {
     path: 'home',

@@ -26,4 +26,7 @@ export class ProductComponent implements OnInit {
   navigateToPage2() {
     this.router.navigate(['/category']); //
   }
+  navigateToPage5() {
+    this.router.navigate(['/company']); //
+  }
 }
