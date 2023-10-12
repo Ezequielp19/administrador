@@ -3,9 +3,6 @@
     <ion-title style="text-align: center;">
       Bienvenido
     </ion-title>
-    <ion-buttons slot="end"> 
-      <ion-button (click)="navigateToPage6">Cerrar Sesión</ion-button>
-    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -71,6 +68,17 @@
           </ion-card-header>
         </ion-card>
       </ion-col>
+
+      <ion-col size="6">
+        <ion-card (click)="navigateToPage6()" class="centro-vertical">
+          <ion-icon name="exit" class="icono-grande"></ion-icon>
+          
+            <ion-card-header>
+            <ion-card-title>Cerrar Sesion</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
     </ion-row>
   </ion-grid>
 </ion-content>
+

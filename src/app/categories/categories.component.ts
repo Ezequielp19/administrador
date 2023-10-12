@@ -8,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class CategoriesComponent implements OnInit {
 
   constructor() { }
-
+  goBack() {
+    window.history.back();
+  }
   ngOnInit() {}
 
 }

@@ -9,7 +9,9 @@ import { Router } from '@angular/router';
 export class AdministradorComponent implements OnInit {
 
   constructor(private router: Router) { }
-
+  goBack() {
+    window.history.back();
+  }
   ngOnInit() {
 
   }

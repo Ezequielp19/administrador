@@ -8,7 +8,9 @@ import { Router } from '@angular/router';
 export class EmployeeComponent implements OnInit {
 
   constructor(private router: Router) { }
-
+  goBack() {
+    window.history.back();
+  }
   ngOnInit() {}
 
   navigateToPage1() {
