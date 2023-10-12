@@ -29,4 +29,12 @@ export class EmployeeComponent implements OnInit {
   navigateToPage5() {
     this.router.navigate(['/company']); //
   }
+
+  
+
+
+
+
+
+
 }

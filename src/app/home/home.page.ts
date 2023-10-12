@@ -31,4 +31,9 @@ export class HomePage {
   }
 
   
+  navigateToPage6() {
+    this.router.navigate(['/login']); //
+  }
+
+  
 }
