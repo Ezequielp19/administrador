@@ -10,7 +10,9 @@ export class CategoryComponent implements OnInit {
   
 
   constructor(private router: Router) { }
-
+  goBack() {
+    window.history.back();
+  }
   ngOnInit() {}
 
   navigateToPage1() {

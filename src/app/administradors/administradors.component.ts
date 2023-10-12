@@ -8,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class AdministradorsComponent implements OnInit {
 
   constructor() { }
-
+  goBack() {
+    window.history.back();
+  }
   ngOnInit() {}
 
 }
