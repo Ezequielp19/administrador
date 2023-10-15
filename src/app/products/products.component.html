@@ -10,7 +10,7 @@
 </ion-header>
 
 <ion-content class="ion-padding">
-  <h1 class="ion-text-center">Agregar Empleado</h1>
+  <h1 class="ion-text-center">Agregar Producto</h1>
   
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <ion-content class="ion-padding">
@@ -18,37 +18,11 @@
   <form (ngSubmit)="onSubmit()">
     <ion-item>
       <ion-label position="floating">Nombre</ion-label>
-      <ion-input type="text" [(ngModel)]="username" name="username" required></ion-input>
+      <ion-input type="text" [(ngModel)]="productData.name" name="name" required></ion-input>
     </ion-item>
+  
 
-    <ion-item>
-      <ion-label position="floating">Apellido</ion-label>
-      <ion-input type="text" [(ngModel)]="password" name="password" required></ion-input>
-    </ion-item>
 
-    <ion-item>
-      <ion-label position="floating">Salario</ion-label>
-      <ion-input type="number" [(ngModel)]="username" name="username" required></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="floating">Horas Trabajadas</ion-label>
-      <ion-input type="number" [(ngModel)]="username" name="username" required></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-label position="floating">Periodo de trabajo</ion-label>
-      <ion-input type="date" [(ngModel)]="username" name="username" required></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-label position="floating">Telefono</ion-label>
-      <ion-input type="number" [(ngModel)]="username" name="username" required></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-label position="floating">Direccion</ion-label>
-      <ion-input type="text" [(ngModel)]="password" name="password" required></ion-input>
-    </ion-item>
 
     <ion-button expand="full" type="submit" color="primary">Enviar</ion-button>
   </form>

@@ -32,8 +32,4 @@ export class EmployeeComponent implements OnInit {
     this.router.navigate(['/company']); //
   }
 
-  
-
-
-
 }
