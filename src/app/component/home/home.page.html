@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center">
+      Bienvenido
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card class="welcome-card">
+    <ion-card-header>
+      <ion-card-title class="ion-text-center">
+        Descripción
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="ion-text-center">
+      <strong> Desde el home puede acceder a cada una de sus pantallas solamente pulsando sobre ellas  </strong> 
+      <h4>Manual de Usuario:</h4>
+      <a href="./manual de usuario.pdf" download="manual de usuario.pdf">Descargar PDF</a>
+    </ion-card-content>
+  </ion-card>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6">
+        <ion-card (click)="navigateToPage1()" class="centro-vertical">
+          <ion-icon name="people" class="icono-grande"></ion-icon>
+            <ion-card-header>
+            <ion-card-title>Empleados</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+
+      <ion-col size="6">
+        <ion-card (click)="navigateToPage3()" class="centro-vertical">
+          <ion-icon name="pricetag" class="icono-grande"></ion-icon>
+          <ion-card-header>
+            <ion-card-title>Productos</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+
+      <ion-col size="6">
+        <ion-card (click)="navigateToPage4()" class="centro-vertical">
+          <ion-icon name="business" class="icono-grande" ></ion-icon>
+          <ion-card-header>
+            <ion-card-title>Compañias</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+
+      <ion-col size="6">
+        <ion-card (click)="navigateToPage5()" class="centro-vertical">
+          <ion-icon name="person" class="icono-grande"></ion-icon>
+          <ion-card-header>
+            <ion-card-title>Administradores</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+
+      <ion-col size="6">
+        <ion-card (click)="navigateToPage6()" class="centro-vertical">
+          <ion-icon name="exit" class="icono-grande"></ion-icon>
+            <ion-card-header>
+            <ion-card-title>Cerrar Sesion</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+

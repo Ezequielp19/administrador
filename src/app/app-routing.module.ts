@@ -1,74 +1,38 @@
 import { NgModule } from '@angular/core';
-import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
+
+// components
+import { ProductComponent } from './component/product/product.component';
+import { ProductsComponent } from './component/products/products.component';
+import { AdministradorComponent } from './component/administrador/administrador.component';
+import { AdministradorsComponent } from './component/administradors/administradors.component';
+import { CompanyComponent } from './component/company/company.component';
+import { CompaniasComponent } from './component/companies/companies.component';
+import { EmpleadoComponent } from './component/employee/employee.component';
+import { EmpleadosComponent } from './component/employees/employees.component';
+import { HomePage } from './component/home/home.page';
+import { LoginComponent } from './component/login/login.component';
 
 const routes: Routes = [
-  {
-    path: '',
-    redirectTo: 'login',
-    pathMatch: 'full'
-  },
-  {
-    path: 'usuarios',
-    loadChildren: () => import('./userslist/userslist.module').then( m => m.UserslistPageModule)
-  },
-  {
-    path: 'login',
-    loadChildren: () => import('./login/login-routing.module').then( m => m.LoginPageRoutingModule)
-  },
-  {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
-  },
-  {
-    path: 'profile/:id',
-    loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule)
-  },
-  {
-    path: 'administrador',
-    loadChildren: () => import('./administrador/administrador-routing.module').then( m => m.administradorPageRoutingModule)
-  },
-  {
-    path: 'administradors',
-    loadChildren: () => import('./administradors/administradors-routing.module').then( m => m.administradorsPageRoutingModule)
-  },
-  {
-    path: 'categories',
-    loadChildren: () => import('./categories/categories-routing.module').then( m => m.categoriesPageRoutingModule)
-  },
-  {
-    path: 'category',
-    loadChildren: () => import('./category/category-routing.module').then( m => m.categoryPageRoutingModule)
-  },
-  {
-    path: 'companies',
-    loadChildren: () => import('./companies/companies-routing.module').then( m => m.companiesPageRoutingModule)
-  },
-  {
-    path: 'company',
-    loadChildren: () => import('./company/company-routing.module').then( m => m.companyPageRoutingModule)
-  },
-  {
-    path: 'employee',
-    loadChildren: () => import('./employee/employee-routing.module').then( m => m.employeePageRoutingModule)
-  },
-  {
-    path: 'employees',
-    loadChildren: () => import('./employees/employees-routing.module').then( m => m.employeesPageRoutingModule)
-  },
-  {
-    path: 'product',
-    loadChildren: () => import('./product/product-routing.module').then( m => m.productPageRoutingModule)
-  },
-  {
-    path: 'products',
-    loadChildren: () => import('./products/products-routing.module').then( m => m.productsPageRoutingModule)
-  }
+  {path: 'product', component: ProductComponent},
+  {path: 'products', component: ProductsComponent },
+  {path: 'editar-product/:id', component: ProductsComponent },
+  // {path: 'administrador', component: AdministradorComponent},
+  // {path: 'administradors', component: AdministradorsComponent },
+  // {path: 'editar-administrador/:id', component: AdministradorsComponent },
+  {path: 'company', component: CompanyComponent},
+  {path: 'companies', component: CompaniasComponent },
+  {path: 'editar-compania/:id', component: CompaniasComponent },
+  {path: 'employee', component: EmpleadoComponent},
+  {path: 'employees', component: EmpleadosComponent },
+  {path: 'editar-empleado/:id', component: EmpleadosComponent },
+  {path: 'home', component: HomePage},
+  // {path: 'login', component: LoginComponent},
+  {path: '', redirectTo: 'product', pathMatch: 'full'}
 ];
 
 @NgModule({
-  imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
-  ],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

@@ -1,0 +1,6 @@
+.fixed-button {
+    position: fixed;
+    bottom: 20px; /* Ajusta la distancia del botón desde la parte inferior de la pantalla */
+    left: 50%; /* Opcional: si deseas alinear el botón en el centro horizontal */
+    transform: translateX(-50%);
+  }

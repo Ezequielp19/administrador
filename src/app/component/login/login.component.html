@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="ion-text-center">Iniciar Sesión</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form class="login-form">
+    <ion-list lines="full">
+      <ion-item>
+        <ion-input type="email" #emailInput placeholder="Correo Electrónico"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="password" #passwordInput placeholder="Contraseña"></ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-button expand="full" class="login-button" (click)="navigateToPage1()">Iniciar Sesión</ion-button>
+  </form>
+</ion-content>

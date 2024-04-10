@@ -1,0 +1,35 @@
+/* Estilos para el formulario de inicio de sesión */
+.login-form {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  
+  /* Estilos para los elementos del formulario */
+  ion-item {
+    --padding-start: 0;
+    --padding-end: 0;
+  }
+  
+  ion-input {
+    --padding-start: 10px;
+    --padding-end: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  /* Estilos para el botón de inicio de sesión */
+  .login-button {
+    margin-top: 20px;
+    --background: #3498db;
+    --color: #fff;
+    --border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  /* Estilos para el título del header */
+  ion-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+  }
+  
