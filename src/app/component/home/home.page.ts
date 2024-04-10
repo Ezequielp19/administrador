@@ -21,15 +21,10 @@ export class HomePage {
   navigateToPage4() {
     this.router.navigate(['/company']); //
   }
-
   navigateToPage5() {
     this.router.navigate(['/administrador']); //
   }
-
-  
   navigateToPage6() {
     this.router.navigate(['/login']); //
   }
-
-  
 }
