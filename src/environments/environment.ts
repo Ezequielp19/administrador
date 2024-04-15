@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://localhost:5000'
+  // apiUrl: 'http://localhost:5000'
+  apiUrl: 'https://backpesca-1.onrender.com'
 };
 /*
  * For easier debugging in development mode, you can import the following file

@@ -5,7 +5,7 @@
         <ion-icon name="arrow-back"></ion-icon>
       </ion-button>
     </ion-buttons>
-    <ion-title style="text-align: center;">Producto</ion-title>
+    <ion-title style="text-align: center;">Nuevos Productos</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -25,7 +25,7 @@
 
 
 <div class="ion-text-center">
-    <h2>Lista de Productos</h2>
+    <h2>Lista de Productos Nuevos</h2>
     <!-- Enlace a Bootstrap desde un CDN -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <table class="table">
@@ -39,15 +39,15 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let prod of listProductos; let i = index">
+        <tr *ngFor="let prodN of listProductosNew; let i = index">
           <th scope="row">{{ i + 1 }}</th>
-          <td>{{ prod.nombre }}</td>
-          <td>{{ prod.precio }}</td>
-          <td>{{ prod.descuento }}</td>
-          <td>{{ prod.precioFinal }}</td>
+          <td>{{ prodN.nombre }}</td>
+          <td>{{ prodN.precio }}</td>
+          <td>{{ prodN.descuento }}</td>
+          <td>{{ prodN.precioFinal }}</td>
           <td>
-            <button class="btn btn-warning"  [routerLink]="['/editar-product', prod._id]">Editar</button>
-            <button class="btn btn-danger" (click)="eliminarProducto(prod._id)">Eliminar</button>
+            <button class="btn btn-warning"  [routerLink]="['/editar-productoNuevo', prodN._id]">Editar</button>
+            <button class="btn btn-danger" (click)="eliminarProductoNuevo(prodN._id)">Eliminar</button>
           </td>
         </tr>
       </tbody>

@@ -1,34 +1,34 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ProductService } from 'src/app/services/producto.service'; 
+import { NuevoProductoService } from 'src/app/services/productoNuevo.service'; 
 import { AlertController } from '@ionic/angular'; 
 import { Producto } from 'src/app/models/producto'; 
 
 @Component({
-  selector: 'app-product',
-  templateUrl: './product.component.html',
-  styleUrls: ['./product.component.scss'],
+  selector: 'app-productoNuevo',
+  templateUrl: './productoNuevo.component.html',
+  styleUrls: ['./productoNuevo.component.scss'],
 })
-export class ProductComponent implements OnInit {
-  listProductos: Producto[]; // Declara la variable como un array de Productos
+export class ProductNuevoComponent implements OnInit {
+  listProductosNew: Producto[]; // Declara la variable como un array de Productos
 
-  constructor(private router: Router, private productService: ProductService,
+  constructor(private router: Router, private nuevosProductoService: NuevoProductoService,
     private alertCtrl: AlertController) {}
 
   ngOnInit(): void {
-    this.obtenerProductos();
+    this.obtenerProductosNuevos();
   }
 
-  obtenerProductos() {
-    this.productService.getAllProductos().subscribe(data => {
+  obtenerProductosNuevos() {
+    this.nuevosProductoService.getAllProductoNuevo().subscribe(data => {
       console.log(data);
-      this.listProductos = data;
+      this.listProductosNew = data;
     });
   }
 
-  eliminarProducto(id: string) {
-    this.productService.deleteProducto(id).subscribe(() => {
-      this.obtenerProductos();
+  eliminarProductoNuevo(id: string) {
+    this.nuevosProductoService.deleteProductoNuevo(id).subscribe(() => {
+      this.obtenerProductosNuevos();
     });
   }
   
@@ -59,7 +59,7 @@ export class ProductComponent implements OnInit {
   }
 
 async verDetalles2(id: string) {
-  const productoSeleccionado = this.listProductos.find(prod => prod._id === id);
+  const productoSeleccionado = this.listProductosNew.find(prod => prod._id === id);
 
   const alert = await this.alertCtrl.create({
     header: productoSeleccionado.nombre,

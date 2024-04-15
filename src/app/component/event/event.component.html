@@ -5,7 +5,7 @@
         <ion-icon name="arrow-back"></ion-icon>
       </ion-button>
     </ion-buttons>
-    <ion-title style="text-align: center;">Producto</ion-title>
+    <ion-title style="text-align: center;">Evento</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -14,40 +14,40 @@
   <ion-title style="text-align: center;">
       <ion-icon name="home" (click)="navigateToPage1()" class="icon"></ion-icon>
       <ion-icon name="people-circle-outline" (click)="navigateToPage4()" class="icon"></ion-icon>
-      <ion-icon name="dice-outline" (click)="navigateToPage3()" class="icon"></ion-icon>
+      <ion-icon name="pricetag" (click)="navigateToPage3()" class="icon"></ion-icon>
       <ion-icon name="people-outline" (click)="navigateToPage5()" class="icon"></ion-icon>
       <ion-icon name="copy-outline" (click)="navigateToPage7()" class="icon"></ion-icon>
-      <ion-icon name="ticket-outline" (click)="navigateToPage6()" class="icon"></ion-icon>
+      <ion-icon name="dice-outline" (click)="navigateToPage6()" class="icon"></ion-icon>
   </ion-title>
 </ion-toolbar>
 
 <ion-content class="ion-padding">
 
-
-<div class="ion-text-center">
-    <h2>Lista de Productos</h2>
+  <div class="ion-text-center">
+    <h2>Lista de Evento</h2>
     <!-- Enlace a Bootstrap desde un CDN -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <table class="table">
       <thead>
         <tr>
+          <th scope="col">ID</th>
           <th scope="col">Nombre</th>
-          <th scope="col">Precio</th>
-          <th scope="col">Descuento</th>
-          <th scope="col">PrecioFinal</th>
+          <th scope="col">Foto</th>
+          <th scope="col">Fecha</th>
+          <th scope="col">Descripcion</th>
           <th scope="col"><button  class="btn btn-primary"  (click)="navigateToPage6()">Agregar</button></th>
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let prod of listProductos; let i = index">
+        <tr *ngFor="let even of listEvent; let i = index">
           <th scope="row">{{ i + 1 }}</th>
-          <td>{{ prod.nombre }}</td>
-          <td>{{ prod.precio }}</td>
-          <td>{{ prod.descuento }}</td>
-          <td>{{ prod.precioFinal }}</td>
+          <td>{{ even.nombre }}</td>
+          <td>{{ even.foto }}</td>
+          <td>{{ even.fecha }}</td>
+          <td>{{ even.descripcion }}</td>
           <td>
-            <button class="btn btn-warning"  [routerLink]="['/editar-product', prod._id]">Editar</button>
-            <button class="btn btn-danger" (click)="eliminarProducto(prod._id)">Eliminar</button>
+            <button class="btn btn-warning"  [routerLink]="['/editar-evento', even._id]">Editar</button>
+            <button class="btn btn-danger" (click)="eliminarEvento(even._id)">Eliminar</button>
           </td>
         </tr>
       </tbody>

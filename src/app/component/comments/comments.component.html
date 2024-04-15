@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="goBack()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title style="text-align: center;">Comentario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="ion-padding">
+  <h1 class="ion-text-center">{{ titulo | uppercase}}</h1>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<ion-content class="ion-padding">
+  <form [formGroup]="comentForm" (ngSubmit)="agregarComentario()">
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input type="text" formControlName="nombre"  required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Comentario</ion-label>
+      <ion-input type="text" formControlName="comentario" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Puntuacion</ion-label>
+      <ion-input type="number" formControlName="puntuacion" required></ion-input>
+    </ion-item>
+
+    <ion-button expand="full" type="submit" color="primary">Enviar</ion-button>
+  </form>
+</ion-content>
+  
+</ion-content>

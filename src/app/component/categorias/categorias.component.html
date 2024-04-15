@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="goBack()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title style="text-align: center;">Categorias</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <h1 class="ion-text-center">{{ titulo | uppercase}}</h1>
+
+  <form [formGroup]="categoriaForm" (ngSubmit)="agregarCategoria()">
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input type="text" formControlName="nombre" required></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label position="floating">Imagen</ion-label>
+      <ion-input type="text" formControlName="imagen" required></ion-input>
+    </ion-item>
+
+
+    <ion-button expand="full" type="submit" color="primary" onclick="enviar()">Enviar</ion-button>
+  </form>
+</ion-content>

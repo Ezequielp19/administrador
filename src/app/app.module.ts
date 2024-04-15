@@ -13,25 +13,39 @@ import { HttpClientModule } from "@angular/common/http";
 
 import { ProductComponent } from './component/product/product.component';
 import { ProductsComponent } from './component/products/products.component';
-// import { AdministradorComponent } from './component/administrador/administrador.component';
-// import { AdministradorsComponent } from './component/administradors/administradors.component';
-import { CompanyComponent } from './component/company/company.component';
-import { CompaniasComponent } from './component/companies/companies.component';
-import { EmpleadoComponent } from "./component/employee/employee.component";
-import { EmpleadosComponent } from "./component/employees/employees.component";
-
+import { NuevosProductsComponent } from "./component/productosNuevos/productosNuevos.component";
+import { CategoriasComponent } from "./component/categorias/categorias.component";
+import { CategoriaComponent } from "./component/categoria/categoria.component";
+import { ComentarioComponent } from "./component/comment/comment.component";
+import { CommentsComponent } from "./component/comments/comments.component";
+import { EventComponent } from "./component/event/event.component";
+import { EventsComponent } from "./component/events/events.component";
+import { SorteoComponent } from "./component/lotery/lotery.component";
+import { SorteosComponent } from "./component/loteryes/loteryes.component";
+import { SomoComponent } from "./component/qSomo/quienesSomo.component";
+import { SomosComponent } from "./component/qSomos/quienesSomos.component";
+import { HomePage } from "./component/home/home.page";
+import { ProductNuevoComponent } from "./component/productoNuevo/productoNuevo.component";
 
 
 @NgModule({
   declarations: [AppComponent,
+  HomePage,
   ProductComponent,
   ProductsComponent,
-  // AdministradorComponent,
-  // AdministradorsComponent,
-  CompanyComponent,
-  CompaniasComponent,
-  EmpleadoComponent,
-  EmpleadosComponent],
+  NuevosProductsComponent,
+  ProductNuevoComponent,
+  CategoriasComponent,
+  CategoriaComponent,
+  ComentarioComponent,
+  CommentsComponent,
+  EventComponent,
+  EventsComponent,
+  SorteoComponent,
+  SorteosComponent,
+  SomoComponent,
+  SomosComponent
+  ],
 
   entryComponents: [],
   imports: [
